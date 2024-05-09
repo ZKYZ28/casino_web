@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --primary-color: #1e2124;
+    --secondary-color: #6c757d;
+}
+
+html {
+    scroll-behavior: smooth;
+    color: white;
+}
+
+.background-primary-color{
+    background-color: var(--primary-color);
+}
+
+.min-content-page-height {
+    min-height: 87.5vh;
+}
+
+.button {
+    padding: 10px 15px;
+    background: rgb(202, 7, 103);
+    background: linear-gradient(90deg, rgba(202, 7, 103, 1) 28%, rgba(250, 37, 59, 1) 100%);
+    border: none;
+    cursor: pointer;
+    transform: skew(-15deg);
+    overflow: hidden;
+    width: 8vw;
+}
+
+.button-text {
+    display: block;
+    transform: skew(15deg);
+    color: white;
+    font-weight: bold;
+}
