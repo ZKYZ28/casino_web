@@ -18,7 +18,7 @@ function Header() {
                 </NavLink>
 
 
-                <NavLink to={'/'}>
+                <NavLink to={'/register'}>
                     <button className="button shadow-lg shadow-red-500/30 hover:shadow-red-500/60">
                         <span className="button-text">Sign Up</span>
                     </button>
