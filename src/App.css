@@ -5,17 +5,36 @@
 
 :root {
     --primary-color: #1e2124;
-    --secondary-color: #6c757d;
+    --secondary-color: #fa253b;
+    --third-color: #282b30;
 }
 
 html {
     scroll-behavior: smooth;
     color: white;
+    background-color: var(--primary-color);
 }
 
 .background-primary-color{
     background-color: var(--primary-color);
 }
+
+text-primary-color{
+    color: var(--primary-color);
+}
+
+.background-secondary-color{
+    background-color: var(--secondary-color);
+}
+
+.text-secondary-color {
+    color: var(--secondary-color);
+}
+
+.background-third-color{
+    background-color: var(--third-color);
+}
+
 
 .min-content-page-height {
     min-height: 87.5vh;
@@ -37,4 +56,13 @@ html {
     transform: skew(15deg);
     color: white;
     font-weight: bold;
+}
+
+@font-face {
+    font-family: 'mexcellent';
+    src: url('assets/fonts/mexcellent_3d.otf') format('opentype');
+}
+
+.neon-font {
+    font-family: 'mexcellent', sans-serif;
 }
