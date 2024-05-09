@@ -66,9 +66,8 @@ const buildInputRegister = (password: string) => {
 const RegisterPage = () => {
     const {setJwtToken} = useAuth();
     const navigate = useNavigate();
-    const [isLoading, setIsLoading] = useState(false);
 
-    const {mutate: mutateRegister, error: errorMutateRegister} = useRegisterAccount() as {
+    const {mutate: mutateRegister} = useRegisterAccount() as {
         mutate: any;
         error: AxiosError<unknown>;
     };
@@ -89,7 +88,6 @@ const RegisterPage = () => {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setIsLoading(true);
 
         mutateRegister(
             {
@@ -103,11 +101,9 @@ const RegisterPage = () => {
                 // Recuperer le token renvoyé par l'api
                 onSuccess: (data: { data: string }) => {
                     setJwtToken(data.data);
-                    setIsLoading(false);
                     navigate('/holidays', {replace: true});
                 },
                 onError: () => {
-                    setIsLoading(false);
                 },
             }
         );
@@ -139,6 +135,7 @@ const RegisterPage = () => {
                     </div>
 
                     <div className="flex justify-center">
+                        <button type={'submit'}>SEND</button>
                     </div>
                 </form>
 

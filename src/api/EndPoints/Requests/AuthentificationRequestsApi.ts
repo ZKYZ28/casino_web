@@ -5,7 +5,7 @@ import CONFIGURATION from '../Configuration.ts';
 import {Register} from "../../Models/Register.ts";
 
 class AuthentificationRequestsApi {
-  static async createAccount(newAccount: Register) {
+  static async registerAccount(newAccount: Register) {
     return axiosInstance.post(`${CONFIGURATION.API_ENDPOINT}/authentification/register`, newAccount);
   }
 

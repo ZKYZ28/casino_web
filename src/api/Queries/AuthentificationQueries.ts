@@ -6,7 +6,9 @@ import {Register} from "../Models/Register.ts";
 
 export const useRegisterAccount = () => {
   const client = useQueryClient();
-  return useMutation((newAccount: Register) => AuthentificationRequestsApi.createAccount(newAccount), {
+
+  return useMutation({
+    mutationFn: (newAccount: Register) => AuthentificationRequestsApi.registerAccount(newAccount),
     onSuccess: () => {
       client.invalidateQueries(authentificationKeys.all);
     },
