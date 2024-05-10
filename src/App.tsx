@@ -4,7 +4,6 @@ import {QueryClientProvider} from "@tanstack/react-query";
 import queryClient from "./api/QueryClient.ts";
 import {StrictMode} from "react";
 import AuthProvider from "./providers/AuthProvider.tsx";
-import {ModalProvider} from "./providers/ModalProvider.tsx";
 
 function App() {
 
@@ -12,9 +11,7 @@ function App() {
       <StrictMode>
         <QueryClientProvider client={queryClient}>
             <AuthProvider>
-                <ModalProvider>
-                    <Routes />
-                </ModalProvider>
+                <Routes />
             </AuthProvider>
         </QueryClientProvider>
 

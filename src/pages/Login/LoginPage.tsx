@@ -102,6 +102,7 @@ const LoginPage = () => {
             {isLoading ? (
               <Loading />
             ) : (
+
             )}
           </div>
           <p className="text-xl text-blue-800 font-semibold mb-8">Vous n'avez pas encore de compte ? </p>
