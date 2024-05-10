@@ -1,0 +1,11 @@
+.carousel img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-up {
+    transform: translateY(-100%);
+}
+
+.slide-down {
+    transform: translateY(100%);
+}
