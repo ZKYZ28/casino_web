@@ -22,7 +22,7 @@ const Landing = () => {
                         <span className="button-text">Join now</span>
                     </button>
 
-                    <img src={leprechaun} className={'absolute bottom-6 right-0 w-[38vh]'}/>
+                    <img src={leprechaun} className={'absolute bottom-6 right-0 w-[38vh] hidden 2xl:block'}/>
                 </div>
 
                 <div className={'w-4/12'}>
